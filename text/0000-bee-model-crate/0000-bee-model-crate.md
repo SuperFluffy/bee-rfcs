@@ -155,7 +155,7 @@ here without further specifying it and leave it as an implementation detail.
 Similary, we don't specify the proof of work algorithm any further and leave
 it as a function from a stream of bytes to a `Nonce`, `f: &[u8] -> Nonce`.
 
-```
+```rust
 impl UnprovenTransaction {
     pub fn calculate_nonce<F>(&self, pow_algorithm: F) -> Nonce
     where
